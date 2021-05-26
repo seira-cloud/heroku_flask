@@ -37,10 +37,9 @@ def model_recommender(df):
 
 
 
-def user_recommendation(input_dict, model_function):
+def user_recommendation(input_dict, R, Q, nmf):
     '''
     '''
-    R, P, Q, nmf = model_function
 
     ranking = []
     for i in list(range(0,5)):

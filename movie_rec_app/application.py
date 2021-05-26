@@ -8,7 +8,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import pandas as pd
-from movie_rec_app.recommender import model_recommender, user_recommendation
+from movie_rec_app.recommender import  user_recommendation
+import pickle
 
 
 
@@ -23,10 +24,13 @@ def recommender():
     html_form_data = dict(request.args)
     print(html_form_data)
 
-    df = pd.read_csv('movie_rec_app/user_item_matrix.csv')
-    recs= user_recommendation(html_form_data, model_recommender(df))
+    with open("nmf_model", "rb") as f:
+        R, P, Q, nmf = pickle.load(f) 
     
-    #recs = get_recommendations()
+    recs= user_recommendation(html_form_data, R, Q, nmf)
+
+    
+    
 
     return render_template('recommendations.html',
                             movies = recs)
