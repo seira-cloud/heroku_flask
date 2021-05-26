@@ -24,7 +24,7 @@ def recommender():
     print(html_form_data)
 
     df = pd.read_csv('movie_rec_app/user_item_matrix.csv')
-    recs= user_recommendation(html_form_data, model_recommender(df.iloc[0:500_000]))
+    recs= user_recommendation(html_form_data, model_recommender(df))
     
     #recs = get_recommendations()
 

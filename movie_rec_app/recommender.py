@@ -4,20 +4,6 @@ import pandas as pd
 import numpy as np
 from sklearn.decomposition import NMF
 
-def create_user_item_matrix(file_ratings, file_movies, n_rows):
-    '''
-    '''
-    ratings = pd.read_csv(file_ratings, nrows=n_rows) #dataset to big --> kernel crashs everytime just use first 1_000_000 data
-
-    #make a dict with movieId and title
-    movies = pd.read_csv(file_movies, index_col=0)
-    movies.drop(columns='genres', inplace=True)
-
-    df_ratings_movie = pd.merge(ratings, movies, how='inner', on='movieId')
-    df_ratings_movie.drop(columns=['timestamp','movieId'], inplace=True)
-    return df_ratings_movie
-
-
 def model_recommender(df):
     '''
     '''
