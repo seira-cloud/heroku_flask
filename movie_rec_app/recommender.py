@@ -51,7 +51,7 @@ def user_recommendation(input_dict, R, Q, nmf):
 
     dict_user = {titel[i]:ranking[i] for i in range(len(titel))}
     
-    new_user = pd.DataFrame(dict_user, index=['new_user'], columns=R.columns)
+    new_user = pd.DataFrame(data=dict_user, index=['new_user'], columns=R.columns)
     new_user = new_user.fillna(2.54)
 
     user_P = nmf.transform(new_user)
@@ -63,5 +63,3 @@ def user_recommendation(input_dict, R, Q, nmf):
     recommendations_user = list(recommendations.sort_values(axis=1, by='new_user', ascending=False))
 
     return recommendations_user[:5]
-
-
