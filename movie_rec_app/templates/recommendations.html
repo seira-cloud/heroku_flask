@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1 class="text-info fw-bold fs-1"> Recommendations: </h2>
+  <ul class="text-light">
+    {% for m in movies%}
+    <li>{{ m }}</li>
+    {% endfor %}
+    <ul>
+      <p></p>
+      <p>
+        <a href="https://www.imdb.com/">Go to imdb!</a>
+      </p>
+      <p>
+        <a href="/">Go back to main page</a>
+      </p>
+     
+
+{% endblock %}

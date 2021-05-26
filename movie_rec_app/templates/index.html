@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1 class="text-info fw-bold fs-1"> {{ title }}</h1>
+  <p> <br> </p>
+  <form action="/recommender">
+    <p class="text-light fs-3"> Please rate the following movies on a scale from 0.0 (bad) to 5.0 (awesome):</p>
+	<p> <br> </p>
+	
+	<div class="container">
+		<div class="row">
+		  <div class="col-6">
+			<div class="input-group mb-3">
+				<label class="input-group-text bg-dark text-light" for="inputGroupSelect01">Movie 1</label>
+				<select class="form-select bg-dark text-light" id="inputGroupSelect01" name="titel_movie1">
+				  <option value="Pulp Fiction (1994)">Pulp Fiction</option>
+				  <option value="10 Things I Hate About You (1999)">10 Things I Hate About You</option>
+				  <option value="Speed (1994)">Speed</option>
+				  <option value="Little Women (1994)">Little Women</option>
+				  <option value="Die Hard (1988)">Die Hard</option>
+				  <option value="Doctor Strange (2016)">Doctor Strange</option>
+				  <option value="Snakes on a Plane (2006)">Snakes on a Plane</option>
+				  <option value="Fahrenheit 9/11 (2004)">Fahrenheit 9/11</option>
+				  <option value="Finding Nemo (2003)">Finding Nemo</option>
+				  <option value="Bad Boys (1995)">Bad Boys</option>
+				  <option value="Black Swan (2010)">Black Swan</option>
+				  <option value="John Wick (2014)">John Wick</option>
+				  <option value="Kill Bill: Vol. 1 (2003)">Kill Bill: Vol. 1</option>
+				  <option value="Madagascar (2005)">Madagascar</option>
+				  <option value="Mr. & Mrs. Smith (2005)">Mr. & Mrs. Smith</option>
+				  <option value="WALL·E (2008)">WALL·E</option>
+				  <option value="Harry Potter and the Prisoner of Azkaban (2004)">Harry Potter and the Prisoner of Azkaban</option>
+				  <option value="Pretty Woman (1990)">Pretty Woman</option>
+				  <option value="Good Will Hunting (1997)">Good Will Hunting</option>
+				  <option value="Pride and Prejudice (1995)">Pride and Prejudice</option>
+				</select>
+				<input type="text" class="bg-dark text-light" name="rating_movie1" placeholder="0.0 - 5.0"><br>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+			<div class="input-group mb-3">
+				<label class="input-group-text bg-dark text-light" for="inputGroupSelect01">Movie 2</label>
+				<select class="form-select bg-dark text-light" id="inputGroupSelect01" name="titel_movie2">
+					<option value="Pulp Fiction (1994)">Pulp Fiction</option>
+					<option value="10 Things I Hate About You (1999)">10 Things I Hate About You</option>
+					<option value="Speed (1994)">Speed</option>
+					<option value="Little Women (1994)">Little Women</option>
+					<option value="Die Hard (1988)">Die Hard</option>
+					<option value="Doctor Strange (2016)">Doctor Strange</option>
+					<option value="Snakes on a Plane (2006)">Snakes on a Plane</option>
+					<option value="Fahrenheit 9/11 (2004)">Fahrenheit 9/11</option>
+					<option value="Finding Nemo (2003)">Finding Nemo</option>
+					<option value="Bad Boys (1995)">Bad Boys</option>
+					<option value="Black Swan (2010)">Black Swan</option>
+					<option value="John Wick (2014)">John Wick</option>
+					<option value="Kill Bill: Vol. 1 (2003)">Kill Bill: Vol. 1</option>
+					<option value="Madagascar (2005)">Madagascar</option>
+					<option value="Mr. & Mrs. Smith (2005)">Mr. & Mrs. Smith</option>
+					<option value="WALL·E (2008)">WALL·E</option>
+					<option value="Harry Potter and the Prisoner of Azkaban (2004)">Harry Potter and the Prisoner of Azkaban</option>
+					<option value="Pretty Woman (1990)">Pretty Woman</option>
+					<option value="Good Will Hunting (1997)">Good Will Hunting</option>
+					<option value="Pride and Prejudice (1995)">Pride and Prejudice</option>
+				</select>
+				<input type="text" class="bg-dark text-light" name="rating_movie2" placeholder="0.0 - 5.0"><br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+			<div class="input-group mb-3">
+				<label class="input-group-text bg-dark text-light" for="inputGroupSelect01">Movie 3</label>
+				<select class="form-select bg-dark text-light" id="inputGroupSelect01" name="titel_movie3">
+					<option value="Pulp Fiction (1994)">Pulp Fiction</option>
+					<option value="10 Things I Hate About You (1999)">10 Things I Hate About You</option>
+					<option value="Speed (1994)">Speed</option>
+					<option value="Little Women (1994)">Little Women</option>
+					<option value="Die Hard (1988)">Die Hard</option>
+					<option value="Doctor Strange (2016)">Doctor Strange</option>
+					<option value="Snakes on a Plane (2006)">Snakes on a Plane</option>
+					<option value="Fahrenheit 9/11 (2004)">Fahrenheit 9/11</option>
+					<option value="Finding Nemo (2003)">Finding Nemo</option>
+					<option value="Bad Boys (1995)">Bad Boys</option>
+					<option value="Black Swan (2010)">Black Swan</option>
+					<option value="John Wick (2014)">John Wick</option>
+					<option value="Kill Bill: Vol. 1 (2003)">Kill Bill: Vol. 1</option>
+					<option value="Madagascar (2005)">Madagascar</option>
+					<option value="Mr. & Mrs. Smith (2005)">Mr. & Mrs. Smith</option>
+					<option value="WALL·E (2008)">WALL·E</option>
+					<option value="Harry Potter and the Prisoner of Azkaban (2004)">Harry Potter and the Prisoner of Azkaban</option>
+					<option value="Pretty Woman (1990)">Pretty Woman</option>
+					<option value="Good Will Hunting (1997)">Good Will Hunting</option>
+					<option value="Pride and Prejudice (1995)">Pride and Prejudice</option>
+				</select>
+				<input type="text" class="bg-dark text-light" name="rating_movie3" placeholder="0.0 - 5.0"><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+			<div class="input-group mb-3">
+				<label class="input-group-text bg-dark text-light" for="inputGroupSelect01">Movie 4</label>
+				<select class="form-select bg-dark text-light" id="inputGroupSelect01" name="titel_movie4">
+					<option value="Pulp Fiction (1994)">Pulp Fiction</option>
+					<option value="10 Things I Hate About You (1999)">10 Things I Hate About You</option>
+					<option value="Speed (1994)">Speed</option>
+					<option value="Little Women (1994)">Little Women</option>
+					<option value="Die Hard (1988)">Die Hard</option>
+					<option value="Doctor Strange (2016)">Doctor Strange</option>
+					<option value="Snakes on a Plane (2006)">Snakes on a Plane</option>
+					<option value="Fahrenheit 9/11 (2004)">Fahrenheit 9/11</option>
+					<option value="Finding Nemo (2003)">Finding Nemo</option>
+					<option value="Bad Boys (1995)">Bad Boys</option>
+					<option value="Black Swan (2010)">Black Swan</option>
+					<option value="John Wick (2014)">John Wick</option>
+					<option value="Kill Bill: Vol. 1 (2003)">Kill Bill: Vol. 1</option>
+					<option value="Madagascar (2005)">Madagascar</option>
+					<option value="Mr. & Mrs. Smith (2005)">Mr. & Mrs. Smith</option>
+					<option value="WALL·E (2008)">WALL·E</option>
+					<option value="Harry Potter and the Prisoner of Azkaban (2004)">Harry Potter and the Prisoner of Azkaban</option>
+					<option value="Pretty Woman (1990)">Pretty Woman</option>
+					<option value="Good Will Hunting (1997)">Good Will Hunting</option>
+					<option value="Pride and Prejudice (1995)">Pride and Prejudice</option>
+				</select>
+				<input type="text" class="bg-dark text-light" name="rating_movie4" placeholder="0.0 - 5.0"><br>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+				<div class="input-group mb-3">
+					<label class="input-group-text bg-dark text-light" for="inputGroupSelect01">Movie 5</label>
+					<select class="form-select bg-dark text-light" id="inputGroupSelect01" name="titel_movie5">
+						<option value="Pulp Fiction (1994)">Pulp Fiction</option>
+						<option value="10 Things I Hate About You (1999)">10 Things I Hate About You</option>
+						<option value="Speed (1994)">Speed</option>
+						<option value="Little Women (1994)">Little Women</option>
+						<option value="Die Hard (1988)">Die Hard</option>
+						<option value="Doctor Strange (2016)">Doctor Strange</option>
+						<option value="Snakes on a Plane (2006)">Snakes on a Plane</option>
+						<option value="Fahrenheit 9/11 (2004)">Fahrenheit 9/11</option>
+						<option value="Finding Nemo (2003)">Finding Nemo</option>
+						<option value="Bad Boys (1995)">Bad Boys</option>
+						<option value="Black Swan (2010)">Black Swan</option>
+						<option value="John Wick (2014)">John Wick</option>
+						<option value="Kill Bill: Vol. 1 (2003)">Kill Bill: Vol. 1</option>
+						<option value="Madagascar (2005)">Madagascar</option>
+						<option value="Mr. & Mrs. Smith (2005)">Mr. & Mrs. Smith</option>
+						<option value="WALL·E (2008)">WALL·E</option>
+						<option value="Harry Potter and the Prisoner of Azkaban (2004)">Harry Potter and the Prisoner of Azkaban</option>
+						<option value="Pretty Woman (1990)">Pretty Woman</option>
+						<option value="Good Will Hunting (1997)">Good Will Hunting</option>
+						<option value="Pride and Prejudice (1995)">Pride and Prejudice</option>
+					</select>
+					<input type="text" class="bg-dark text-light" name="rating_movie5" placeholder="0.0 - 5.0"><br>
+					</div>
+				</div>
+			</div>
+		</div>	
+    <input type="submit" class="btn btn-outline-info">
+  </form>
+
+{% endblock %}
