@@ -26,7 +26,7 @@ def recommender():
 
     with open("movie_rec_app/nmf_model", "rb") as f:
         R, P, Q, nmf = pickle.load(f) 
-    
+    print('loaded')
     recs= user_recommendation(html_form_data, R, Q, nmf)
 
     return render_template('recommendations.html',
