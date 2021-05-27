@@ -26,7 +26,7 @@ def recommender():
     print(html_form_data)
 
     #load pickled model
-    with open("movie_rec_app/nmf_model", "rb") as f:
+    with open("movie_rec_app/nmf_m.pkl", "rb") as f:
         R, P, Q, nmf = pickle.load(f) 
     
     print('loaded')
