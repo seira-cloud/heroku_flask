@@ -21,14 +21,17 @@ def index():
 
 @app.route('/recommender')
 def recommender():
+    #save user input as dict and print it
     html_form_data = dict(request.args)
     print(html_form_data)
 
+    #load pickled model
     with open("movie_rec_app/nmf_model", "rb") as f:
         R, P, Q, nmf = pickle.load(f) 
     
     print('loaded')
     
+    #make recommendations for new user
     recs= user_recommendation(html_form_data, R, Q, nmf)
 
     return render_template('recommendations.html',
