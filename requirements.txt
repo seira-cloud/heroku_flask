@@ -15,7 +15,7 @@ joblib==0.14.1
 keyring==21.2.0
 MarkupSafe==1.1.1
 numpy==1.18.1
-pandas==1.0.3
+pandas==1.2.4
 pkginfo==1.5.0.1
 psycopg2-binary
 pycparser==2.20
